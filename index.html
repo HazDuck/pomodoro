@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pomodoro Clock</title>
+</head>
+    <body>
+        <div class= clock>
+            <span id= minutes-number>00</span><span> :</span>
+            <span id= seconds-number>00</span>
+        </div>
+        <div class= buttons>
+            <br>
+            <img src= "https://i.postimg.cc/k5zX1jD3/002-play.png" id="start-button">
+            <img src="https://i.postimg.cc/KYR85XGD/003-hold.png" id= "pause-button">
+            <img src = "https://i.postimg.cc/CxvKDMgK/001-refresh.png" id= "reset-button">
+        </div>
+        <div class="goal">
+            <p>Goal number of sessions:</p>
+            <input id = "goal-input" type ="text" name="GI" value=-->
+            <button id="goal-button">Submit</button>
+        </div>
+        <div class= session-length>
+            <p>Session Length</p>
+            <p id=pomodoro></p>
+            <div class = plus-minus>
+                <img src="https://i.postimg.cc/wxf62XTQ/001-plus.png" id = "increase-session">
+                <img src ="https://i.postimg.cc/HsrThrrD/002-line.png"id = "decrease-session">
+            </div>
+        </div>
+        <div class= break-length>
+            <p>Break Length</p>
+            <p id=restVaue></p>
+            <div class = plus-minus>
+                <img src="https://i.postimg.cc/wxf62XTQ/001-plus.png" id = "increase-rest">
+                <img src = "https://i.postimg.cc/HsrThrrD/002-line.png" id = "decrease-rest">
+            </div>
+        </div>
+        <div class = "text-fields">
+            <br>Session Length(Mins):
+            <input id = "session-length" type ="text" name="SL" value=>
+            Rest Length(Mins):
+            <input type = "text" name="RL "id = "rest-length" value=>
+        </div>
+        <div class=goal-day>
+            <br>Goal for the day: <span id= "counter-number">0</span>/<span id = goal-text>0</span>
+            <br><button id="reset-counter">Reset Counter</button>
+        </div>
+    </body>
+</html>
