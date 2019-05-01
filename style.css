@@ -31,6 +31,7 @@ body{
     border: 5px solid black;
     padding: 5px;
     width: 250px;
+    margin-left: 20px;
 }
 
 .plus-minus img{
@@ -48,6 +49,7 @@ body{
     border: 5px solid black;
     padding: 5px;
     width: 250px;
+    margin-right: 20px;
 }
 
 .text img{
