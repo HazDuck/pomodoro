@@ -24,7 +24,7 @@ function showTime(secondsLeft) {
             secondsNumber.textContent = seconds;
         }
     } else if (secondsLeft === 0) {
-        secondsNumber.textContent = "00"
+        secondsNumber.textContent = "00";
         if (!resting) {
             restClock();
         } else {
@@ -56,7 +56,7 @@ function workClock() {
 
 function restClock() {
     increaseCounter();
-    let ifCompleted = ifFinished();
+    let ifCompleted = isFinished();
     if (!ifCompleted) {
         if (!reset) {
             alert("Time to rest bro!");
@@ -75,7 +75,7 @@ function increaseCounter () {
     document.getElementById('counter-number').textContent++;
 }
 
-function ifFinished () {
+function isFinished () {
     if (document.getElementById('counter-number').textContent === document.getElementById('goal-text').textContent) {
         return true;
     } else {
@@ -126,8 +126,6 @@ document.getElementById("reset-button").addEventListener('click', ()=> {
         restClock(restValue * 60)
     }
 });
-
-document.getElementById('goal-text').textContent = document.getElementById("goal-input").value;
 
 document.getElementById('increase-session').addEventListener("click", ()=>{
     if (!startTimer) {
