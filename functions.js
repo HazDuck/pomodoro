@@ -1,5 +1,4 @@
 function timer(secs) {
-    console.log("start-timer");
     finishTime = Date.now() + secs * 1000;
     countdown = setInterval(function() {
         let secondsLeft = Math.round((finishTime - Date.now()) / 1000);
@@ -91,7 +90,7 @@ let finishTime;
 let countdown;
 let reset = false;
 
-document.getElementById("start-button").addEventListener('click', ()=>{
+document.getElementById("start-button").addEventListener('click', ()=> {
     if (!startTimer) {
         startTimer = true;
         if (!paused) {
@@ -108,7 +107,6 @@ document.getElementById("start-button").addEventListener('click', ()=>{
 
 document.getElementById("pause-button").addEventListener('click', ()=> {
     if (!paused) {
-        console.log("paused is false")
         pauseClock(countdown);
         pauseTime = pauseClock();
         paused = true;
@@ -119,15 +117,13 @@ document.getElementById("reset-button").addEventListener('click', ()=> {
     reset = true;
     paused = false;
     if (!resting) {
-        console.log("start the work clock");
         workClock(pomodoro * 60)
     } else {
-        console.log("start the rest clock");
         restClock(restValue * 60)
     }
 });
 
-document.getElementById('increase-session').addEventListener("click", ()=>{
+document.getElementById('increase-session').addEventListener("click", ()=> {
     if (!startTimer) {
         document.getElementById("pomodoro").textContent++;
         document.getElementById("minutes-number").textContent = document.getElementById("pomodoro").textContent;
